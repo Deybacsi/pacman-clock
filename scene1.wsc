@@ -1,0 +1,938 @@
+{
+	"sceneObjects": [
+		{
+			"type": "SceneObject",
+			"position": {
+				"x": 28.290372359005488,
+				"y": -2.3576575243602775
+			},
+			"rotation": 0,
+			"behaviors": [],
+			"sprites": [
+				{
+					"type": "Sprite",
+					"animations": {
+						"A_left": {
+							"type": "Animation",
+							"name": "A_left",
+							"startFrame": 0,
+							"endFrame": 2,
+							"numCells": {
+								"x": 3,
+								"y": 4
+							},
+							"image": "pics/move.gif",
+							"imageArea": {
+								"minX": 0,
+								"minY": 0,
+								"maxX": 1,
+								"maxY": 1
+							},
+							"speed": 10,
+							"looping": true,
+							"blending": false,
+							"playMode": "ping-pong",
+							"autoResize": true,
+							"offset": {
+								"x": 0,
+								"y": 0
+							},
+							"stopped": false,
+							"properties": {}
+						},
+						"A_right": {
+							"type": "Animation",
+							"name": "A_right",
+							"startFrame": 3,
+							"endFrame": 5,
+							"numCells": {
+								"x": 3,
+								"y": 4
+							},
+							"image": "pics/move.gif",
+							"imageArea": {
+								"minX": 0,
+								"minY": 0,
+								"maxX": 1,
+								"maxY": 1
+							},
+							"speed": 10,
+							"looping": true,
+							"blending": false,
+							"playMode": "ping-pong",
+							"autoResize": true,
+							"offset": {
+								"x": 0,
+								"y": 0
+							},
+							"stopped": false,
+							"properties": {}
+						},
+						"A_up": {
+							"type": "Animation",
+							"name": "A_up",
+							"startFrame": 9,
+							"endFrame": 11,
+							"numCells": {
+								"x": 3,
+								"y": 4
+							},
+							"image": "pics/move.gif",
+							"imageArea": {
+								"minX": 0,
+								"minY": 0,
+								"maxX": 1,
+								"maxY": 1
+							},
+							"speed": 10,
+							"looping": true,
+							"blending": false,
+							"playMode": "ping-pong",
+							"autoResize": true,
+							"offset": {
+								"x": 0,
+								"y": 0
+							},
+							"stopped": false,
+							"properties": {}
+						},
+						"A_down": {
+							"type": "Animation",
+							"name": "A_down",
+							"startFrame": 6,
+							"endFrame": 8,
+							"numCells": {
+								"x": 3,
+								"y": 4
+							},
+							"image": "pics/move.gif",
+							"imageArea": {
+								"minX": 0,
+								"minY": 0,
+								"maxX": 1,
+								"maxY": 1
+							},
+							"speed": 10,
+							"looping": true,
+							"blending": false,
+							"playMode": "ping-pong",
+							"autoResize": true,
+							"offset": {
+								"x": 0,
+								"y": 0
+							},
+							"stopped": false,
+							"properties": {}
+						},
+						"A_die": {
+							"type": "Animation",
+							"name": "A_die",
+							"startFrame": 0,
+							"endFrame": 12,
+							"numCells": {
+								"x": 13,
+								"y": 1
+							},
+							"image": "pics/pacdie.gif",
+							"imageArea": {
+								"minX": 0,
+								"minY": 0,
+								"maxX": 1,
+								"maxY": 1
+							},
+							"speed": 10,
+							"looping": false,
+							"blending": false,
+							"playMode": "forward",
+							"autoResize": true,
+							"offset": {
+								"x": 0,
+								"y": 0
+							},
+							"stopped": false,
+							"properties": {}
+						}
+					},
+					"currentAnimation": "default",
+					"sortPoint": {
+						"x": 0,
+						"y": 0
+					},
+					"layer": 1,
+					"autoResize": false,
+					"visible": true,
+					"image": "pics/01.gif",
+					"imageArea": {
+						"minX": 0,
+						"minY": 0,
+						"maxX": 1,
+						"maxY": 1
+					},
+					"alwaysDraw": false,
+					"name": "",
+					"drawModifiers": [],
+					"pixelShader": "",
+					"pixelShaderUniforms": null,
+					"pixelPerfectMouseEvents": false,
+					"properties": {},
+					"size": {
+						"x": 16,
+						"y": 16
+					}
+				}
+			],
+			"spriteOffsets": [
+				{
+					"x": 0,
+					"y": 0,
+					"angle": 0
+				}
+			],
+			"flowChart": null,
+			"alignment": {
+				"x": "center",
+				"y": "center"
+			},
+			"name": "pacman",
+			"isTemplate": false,
+			"path": "",
+			"addToScene": {
+				"autoListen": true,
+				"params": null
+			},
+			"properties": {},
+			"functions": {
+				"onUpdate": "function (data)\n{\n\t\n}"
+			}
+		},
+		{
+			"type": "SceneObject",
+			"position": {
+				"x": -62.81753297385488,
+				"y": -22.854449291102423
+			},
+			"rotation": 0,
+			"behaviors": [],
+			"sprites": [
+				{
+					"type": "Sprite",
+					"animations": {
+						"A_left": {
+							"type": "Animation",
+							"name": "A_left",
+							"startFrame": 6,
+							"endFrame": 7,
+							"numCells": {
+								"x": 8,
+								"y": 1
+							},
+							"image": "pics/blinky.gif",
+							"imageArea": {
+								"minX": 0,
+								"minY": 0,
+								"maxX": 1,
+								"maxY": 1
+							},
+							"speed": 10,
+							"looping": true,
+							"blending": false,
+							"playMode": "ping-pong",
+							"autoResize": true,
+							"offset": {
+								"x": 0,
+								"y": 0
+							},
+							"stopped": false,
+							"properties": {}
+						},
+						"A_right": {
+							"type": "Animation",
+							"name": "A_right",
+							"startFrame": 2,
+							"endFrame": 3,
+							"numCells": {
+								"x": 8,
+								"y": 1
+							},
+							"image": "pics/blinky.gif",
+							"imageArea": {
+								"minX": 0,
+								"minY": 0,
+								"maxX": 1,
+								"maxY": 1
+							},
+							"speed": 10,
+							"looping": true,
+							"blending": false,
+							"playMode": "ping-pong",
+							"autoResize": true,
+							"offset": {
+								"x": 0,
+								"y": 0
+							},
+							"stopped": false,
+							"properties": {}
+						},
+						"A_up": {
+							"type": "Animation",
+							"name": "A_up",
+							"startFrame": 0,
+							"endFrame": 1,
+							"numCells": {
+								"x": 8,
+								"y": 1
+							},
+							"image": "pics/blinky.gif",
+							"imageArea": {
+								"minX": 0,
+								"minY": 0,
+								"maxX": 1,
+								"maxY": 1
+							},
+							"speed": 10,
+							"looping": true,
+							"blending": false,
+							"playMode": "ping-pong",
+							"autoResize": true,
+							"offset": {
+								"x": 0,
+								"y": 0
+							},
+							"stopped": false,
+							"properties": {}
+						},
+						"A_down": {
+							"type": "Animation",
+							"name": "A_down",
+							"startFrame": 4,
+							"endFrame": 5,
+							"numCells": {
+								"x": 8,
+								"y": 1
+							},
+							"image": "pics/blinky.gif",
+							"imageArea": {
+								"minX": 0,
+								"minY": 0,
+								"maxX": 1,
+								"maxY": 1
+							},
+							"speed": 10,
+							"looping": true,
+							"blending": false,
+							"playMode": "ping-pong",
+							"autoResize": true,
+							"offset": {
+								"x": 0,
+								"y": 0
+							},
+							"stopped": false,
+							"properties": {}
+						}
+					},
+					"currentAnimation": "default",
+					"sortPoint": {
+						"x": 0,
+						"y": 0
+					},
+					"layer": 1,
+					"autoResize": false,
+					"visible": true,
+					"image": "pics/blinky.gif",
+					"imageArea": {
+						"minX": 0,
+						"minY": 0,
+						"maxX": 1,
+						"maxY": 1
+					},
+					"alwaysDraw": false,
+					"name": "",
+					"drawModifiers": [],
+					"pixelShader": "",
+					"pixelShaderUniforms": null,
+					"pixelPerfectMouseEvents": false,
+					"properties": {},
+					"size": {
+						"x": 16,
+						"y": 16
+					}
+				}
+			],
+			"spriteOffsets": [
+				{
+					"x": 0,
+					"y": 0,
+					"angle": 0
+				}
+			],
+			"flowChart": null,
+			"alignment": {
+				"x": "center",
+				"y": "center"
+			},
+			"name": "blinky",
+			"isTemplate": false,
+			"path": "",
+			"addToScene": {
+				"autoListen": true,
+				"params": null
+			},
+			"properties": {}
+		},
+		{
+			"type": "SceneObject",
+			"position": {
+				"x": -41.84897276749524,
+				"y": -24.13823869149179
+			},
+			"rotation": 0,
+			"behaviors": [],
+			"sprites": [
+				{
+					"type": "Sprite",
+					"animations": {
+						"A_left": {
+							"type": "Animation",
+							"name": "A_left",
+							"startFrame": 6,
+							"endFrame": 7,
+							"numCells": {
+								"x": 8,
+								"y": 1
+							},
+							"image": "pics/pinky.gif",
+							"imageArea": {
+								"minX": 0,
+								"minY": 0,
+								"maxX": 1,
+								"maxY": 1
+							},
+							"speed": 10,
+							"looping": true,
+							"blending": false,
+							"playMode": "ping-pong",
+							"autoResize": true,
+							"offset": {
+								"x": 0,
+								"y": 0
+							},
+							"stopped": false,
+							"properties": {}
+						},
+						"A_right": {
+							"type": "Animation",
+							"name": "A_right",
+							"startFrame": 2,
+							"endFrame": 3,
+							"numCells": {
+								"x": 8,
+								"y": 1
+							},
+							"image": "pics/pinky.gif",
+							"imageArea": {
+								"minX": 0,
+								"minY": 0,
+								"maxX": 1,
+								"maxY": 1
+							},
+							"speed": 10,
+							"looping": true,
+							"blending": false,
+							"playMode": "ping-pong",
+							"autoResize": true,
+							"offset": {
+								"x": 0,
+								"y": 0
+							},
+							"stopped": false,
+							"properties": {}
+						},
+						"A_up": {
+							"type": "Animation",
+							"name": "A_up",
+							"startFrame": 0,
+							"endFrame": 1,
+							"numCells": {
+								"x": 8,
+								"y": 1
+							},
+							"image": "pics/pinky.gif",
+							"imageArea": {
+								"minX": 0,
+								"minY": 0,
+								"maxX": 1,
+								"maxY": 1
+							},
+							"speed": 10,
+							"looping": true,
+							"blending": false,
+							"playMode": "ping-pong",
+							"autoResize": true,
+							"offset": {
+								"x": 0,
+								"y": 0
+							},
+							"stopped": false,
+							"properties": {}
+						},
+						"A_down": {
+							"type": "Animation",
+							"name": "A_down",
+							"startFrame": 4,
+							"endFrame": 5,
+							"numCells": {
+								"x": 8,
+								"y": 1
+							},
+							"image": "pics/pinky.gif",
+							"imageArea": {
+								"minX": 0,
+								"minY": 0,
+								"maxX": 1,
+								"maxY": 1
+							},
+							"speed": 10,
+							"looping": true,
+							"blending": false,
+							"playMode": "ping-pong",
+							"autoResize": true,
+							"offset": {
+								"x": 0,
+								"y": 0
+							},
+							"stopped": false,
+							"properties": {}
+						}
+					},
+					"currentAnimation": "default",
+					"sortPoint": {
+						"x": 0,
+						"y": 0
+					},
+					"layer": 1,
+					"autoResize": false,
+					"visible": true,
+					"image": "pics/pinky.gif",
+					"imageArea": {
+						"minX": 0,
+						"minY": 0,
+						"maxX": 1,
+						"maxY": 1
+					},
+					"alwaysDraw": false,
+					"name": "",
+					"drawModifiers": [],
+					"pixelShader": "",
+					"pixelShaderUniforms": null,
+					"pixelPerfectMouseEvents": false,
+					"properties": {},
+					"size": {
+						"x": 16,
+						"y": 16
+					}
+				}
+			],
+			"spriteOffsets": [
+				{
+					"x": 0,
+					"y": 0,
+					"angle": 0
+				}
+			],
+			"flowChart": null,
+			"alignment": {
+				"x": "center",
+				"y": "center"
+			},
+			"name": "pinky",
+			"isTemplate": false,
+			"path": "",
+			"addToScene": {
+				"autoListen": true,
+				"params": null
+			},
+			"properties": {}
+		},
+		{
+			"type": "SceneObject",
+			"position": {
+				"x": -22.592131761654763,
+				"y": -24.56616849162158
+			},
+			"rotation": 0,
+			"behaviors": [],
+			"sprites": [
+				{
+					"type": "Sprite",
+					"animations": {
+						"A_left": {
+							"type": "Animation",
+							"name": "A_left",
+							"startFrame": 6,
+							"endFrame": 7,
+							"numCells": {
+								"x": 8,
+								"y": 1
+							},
+							"image": "pics/inky.gif",
+							"imageArea": {
+								"minX": 0,
+								"minY": 0,
+								"maxX": 1,
+								"maxY": 1
+							},
+							"speed": 10,
+							"looping": true,
+							"blending": false,
+							"playMode": "ping-pong",
+							"autoResize": true,
+							"offset": {
+								"x": 0,
+								"y": 0
+							},
+							"stopped": false,
+							"properties": {}
+						},
+						"A_right": {
+							"type": "Animation",
+							"name": "A_right",
+							"startFrame": 2,
+							"endFrame": 3,
+							"numCells": {
+								"x": 8,
+								"y": 1
+							},
+							"image": "pics/inky.gif",
+							"imageArea": {
+								"minX": 0,
+								"minY": 0,
+								"maxX": 1,
+								"maxY": 1
+							},
+							"speed": 10,
+							"looping": true,
+							"blending": false,
+							"playMode": "ping-pong",
+							"autoResize": true,
+							"offset": {
+								"x": 0,
+								"y": 0
+							},
+							"stopped": false,
+							"properties": {}
+						},
+						"A_up": {
+							"type": "Animation",
+							"name": "A_up",
+							"startFrame": 0,
+							"endFrame": 1,
+							"numCells": {
+								"x": 8,
+								"y": 1
+							},
+							"image": "pics/inky.gif",
+							"imageArea": {
+								"minX": 0,
+								"minY": 0,
+								"maxX": 1,
+								"maxY": 1
+							},
+							"speed": 10,
+							"looping": true,
+							"blending": false,
+							"playMode": "ping-pong",
+							"autoResize": true,
+							"offset": {
+								"x": 0,
+								"y": 0
+							},
+							"stopped": false,
+							"properties": {}
+						},
+						"A_down": {
+							"type": "Animation",
+							"name": "A_down",
+							"startFrame": 4,
+							"endFrame": 5,
+							"numCells": {
+								"x": 8,
+								"y": 1
+							},
+							"image": "pics/inky.gif",
+							"imageArea": {
+								"minX": 0,
+								"minY": 0,
+								"maxX": 1,
+								"maxY": 1
+							},
+							"speed": 10,
+							"looping": true,
+							"blending": false,
+							"playMode": "ping-pong",
+							"autoResize": true,
+							"offset": {
+								"x": 0,
+								"y": 0
+							},
+							"stopped": false,
+							"properties": {}
+						}
+					},
+					"currentAnimation": "default",
+					"sortPoint": {
+						"x": 0,
+						"y": 0
+					},
+					"layer": 1,
+					"autoResize": false,
+					"visible": true,
+					"image": "pics/inky.gif",
+					"imageArea": {
+						"minX": 0,
+						"minY": 0,
+						"maxX": 1,
+						"maxY": 1
+					},
+					"alwaysDraw": false,
+					"name": "",
+					"drawModifiers": [],
+					"pixelShader": "",
+					"pixelShaderUniforms": null,
+					"pixelPerfectMouseEvents": false,
+					"properties": {},
+					"size": {
+						"x": 16,
+						"y": 16
+					}
+				}
+			],
+			"spriteOffsets": [
+				{
+					"x": 0,
+					"y": 0,
+					"angle": 0
+				}
+			],
+			"flowChart": null,
+			"alignment": {
+				"x": "center",
+				"y": "center"
+			},
+			"name": "inky",
+			"isTemplate": false,
+			"path": "",
+			"addToScene": {
+				"autoListen": true,
+				"params": null
+			},
+			"properties": {}
+		},
+		{
+			"type": "SceneObject",
+			"position": {
+				"x": -0.3397821549057589,
+				"y": -24.138238691491793
+			},
+			"rotation": 0,
+			"behaviors": [],
+			"sprites": [
+				{
+					"type": "Sprite",
+					"animations": {
+						"A_left": {
+							"type": "Animation",
+							"name": "A_left",
+							"startFrame": 6,
+							"endFrame": 7,
+							"numCells": {
+								"x": 8,
+								"y": 1
+							},
+							"image": "pics/clyde.gif",
+							"imageArea": {
+								"minX": 0,
+								"minY": 0,
+								"maxX": 1,
+								"maxY": 1
+							},
+							"speed": 10,
+							"looping": true,
+							"blending": false,
+							"playMode": "ping-pong",
+							"autoResize": true,
+							"offset": {
+								"x": 0,
+								"y": 0
+							},
+							"stopped": false,
+							"properties": {}
+						},
+						"A_right": {
+							"type": "Animation",
+							"name": "A_right",
+							"startFrame": 2,
+							"endFrame": 3,
+							"numCells": {
+								"x": 8,
+								"y": 1
+							},
+							"image": "pics/clyde.gif",
+							"imageArea": {
+								"minX": 0,
+								"minY": 0,
+								"maxX": 1,
+								"maxY": 1
+							},
+							"speed": 10,
+							"looping": true,
+							"blending": false,
+							"playMode": "ping-pong",
+							"autoResize": true,
+							"offset": {
+								"x": 0,
+								"y": 0
+							},
+							"stopped": false,
+							"properties": {}
+						},
+						"A_up": {
+							"type": "Animation",
+							"name": "A_up",
+							"startFrame": 0,
+							"endFrame": 1,
+							"numCells": {
+								"x": 8,
+								"y": 1
+							},
+							"image": "pics/clyde.gif",
+							"imageArea": {
+								"minX": 0,
+								"minY": 0,
+								"maxX": 1,
+								"maxY": 1
+							},
+							"speed": 10,
+							"looping": true,
+							"blending": false,
+							"playMode": "ping-pong",
+							"autoResize": true,
+							"offset": {
+								"x": 0,
+								"y": 0
+							},
+							"stopped": false,
+							"properties": {}
+						},
+						"A_down": {
+							"type": "Animation",
+							"name": "A_down",
+							"startFrame": 4,
+							"endFrame": 5,
+							"numCells": {
+								"x": 8,
+								"y": 1
+							},
+							"image": "pics/clyde.gif",
+							"imageArea": {
+								"minX": 0,
+								"minY": 0,
+								"maxX": 1,
+								"maxY": 1
+							},
+							"speed": 10,
+							"looping": true,
+							"blending": false,
+							"playMode": "ping-pong",
+							"autoResize": true,
+							"offset": {
+								"x": 0,
+								"y": 0
+							},
+							"stopped": false,
+							"properties": {}
+						}
+					},
+					"currentAnimation": "default",
+					"sortPoint": {
+						"x": 0,
+						"y": 0
+					},
+					"layer": 1,
+					"autoResize": false,
+					"visible": true,
+					"image": "pics/clyde.gif",
+					"imageArea": {
+						"minX": 0,
+						"minY": 0,
+						"maxX": 1,
+						"maxY": 1
+					},
+					"alwaysDraw": false,
+					"name": "",
+					"drawModifiers": [],
+					"pixelShader": "",
+					"pixelShaderUniforms": null,
+					"pixelPerfectMouseEvents": false,
+					"properties": {},
+					"size": {
+						"x": 16,
+						"y": 16
+					}
+				}
+			],
+			"spriteOffsets": [
+				{
+					"x": 0,
+					"y": 0,
+					"angle": 0
+				}
+			],
+			"flowChart": null,
+			"alignment": {
+				"x": "center",
+				"y": "center"
+			},
+			"name": "clyde",
+			"isTemplate": false,
+			"path": "",
+			"addToScene": {
+				"autoListen": true,
+				"params": null
+			},
+			"properties": {}
+		}
+	],
+	"paths": [],
+	"layers": [
+		null,
+		{
+			"scaleFactor": 1,
+			"translateFactor": 1,
+			"renderMode": "2d",
+			"useQuadtree": true,
+			"resolutionFactor": 1,
+			"postProcessShader": "",
+			"postProcessShaderUniforms": null,
+			"properties": {}
+		}
+	],
+	"minScreenSize": {
+		"x": 480,
+		"y": 336
+	},
+	"maxScreenSize": {
+		"x": 480,
+		"y": 336
+	},
+	"orientation": "none",
+	"windowMode": "full",
+	"defaultLayer": 1,
+	"timeline": {
+		"events": []
+	},
+	"loadGlTextures": true,
+	"scripts": [
+		"scene.js",
+		"digits2.js"
+	]
+}
