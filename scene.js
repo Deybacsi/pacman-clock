@@ -261,6 +261,12 @@ function moveobj(oobj,obj) {
         npx=obj['x']; npy=obj['y'];             // new coords 
         ndir=getRand(1,4);                      // generate a random direction 
 
+        /*
+            if you would like to change the random movement to some controlled game-like thing
+            then you should specify here the new direction based on a keypress, or something :)
+
+        */
+
         /* specify the new coordinates (npx, npy) according to direction */
         switch (ndir) {
             case 1:
@@ -289,26 +295,26 @@ function moveobj(oobj,obj) {
         mywalls=mywalls.replace(/X/g, 'x');
 
         /* go back only if it's a dead end */
-        if (npx==obj['ox'] && npy==obj['oy']) {  /* if our NEW coordinates are the same where we WAS in the previous step
-                                                    then its a step backwards
-                                                    we would like to always go in the same direction as long as possible
-                                                 */
-            oktogo=false;                        /* then say NOT OK to go there */
-            if ((mywalls.match(/x/g) || []).length==3) { oktogo=true; }  /* except if the surrounding wall's number is 3 -> it's a dead end, with one exit
+        if (npx==obj['ox'] && npy==obj['oy']) {     /* if our NEW coordinates are the same where we WAS in the previous step
+                                                       then its a step backwards
+                                                       we would like to always go in the same direction as long as possible
+                                                    */
+            oktogo=false;                           // then say NOT OK to go there
+            if ((mywalls.match(/x/g) || []).length==3) { oktogo=true; }  /* except if the number of surrounding walls is 3 -> it's a dead end, with only one exit
                                                                             so the only direction is backwards
                                                                          */
 
         } 
 
         /* if there are 4 surrounding walls -> we are trapped -> go to start position
-           it could happen when time changes, and an actor stucks in an 8's inside
+           it could happen when time changes, and an actor stucks inside in a 6, 8 or 9 digit
         */
         if ((mywalls.match(/x/g) || []).length==4) { oktogo=true; npx=15; npy=11;   // puts actor to the center of the screen
             oobj.setPosition(npx*16-1,npy*16-1);
             break; }
     }
     if (npx==mx+1) { npx=1; oobj.setPosition((npx-1)*16,npy*16); }      // if NEW x > mx , then we are moving out at the right side of scene -> teleport to left side
-    if (npx==0) { npx=mx; oobj.setPosition((npx+1)*16,npy*16); }        // same as left side
+    if (npx==0) { npx=mx; oobj.setPosition((npx+1)*16,npy*16); }        // same for left side
 
     /* move our scene object to the NEW position, and play its animation */
     oobj.moveTo(npx*16,npy*16,obj['s']);
