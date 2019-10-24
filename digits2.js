@@ -1,3 +1,12 @@
+/* clock digits used for display 
+
+   x - means blue wall
+   X - means white wall
+
+   - is an empty space
+
+*/
+
 d=[];
 d[01]='XXX';
 d[02]='X-X';
