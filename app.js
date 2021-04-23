@@ -58,6 +58,7 @@ App = function()
             lastmins=getMins();
             setInterval(function(){
                 if (getMins() != lastmins) { updateminute(); lastmins=getMins(); }
+                //updateminute(); lastmins=getMins();
             },3000); 
             
             // initialize all actor's default positions

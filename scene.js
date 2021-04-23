@@ -83,6 +83,8 @@ function getRand(min, max) {
 */
 function makewall () {
     var x=0; var y=0;
+    let startX=getRandomInt(0,mx)*16;                   // the end where walls collapse if time has changed
+    let startY=getRandomInt(0,my)*16;
     for (y=1; y<=my; y++) {                             // iterate through all the scene
         for (x=1; x<=mx; x++) {
             var fn='p1.gif';                            // default image filename 
@@ -146,7 +148,7 @@ function makewall () {
             }
 
             // remove the current object from Wade scene 
-            wade.removeSceneObject(s[y][x]);
+            wade.removeSceneObject(s[y][x]);   
 
             // if current [x,y] character is an X then put the 'new' string before the filename -> white walls
             if (c[y][x]=='X') {
@@ -157,9 +159,45 @@ function makewall () {
             s[y][x].setPosition(mx*8+4,my*8+4);                         // set it's position
             
             wade.addSceneObject(s[y][x]);                               // and add back to the scene 
-            s[y][x].moveTo(x*16,y*16, 500);                             // move the new wall object to it's place from the center slowly
+            //s[y][x].moveTo(x*16,y*16, 500);                             // move the new wall object to it's place from the center slowly
 
         } 
+    }
+    //startX=getRandomInt(0,mx)*16;
+    //startY=getRandomInt(0,my)*16;
+    switch (getRandomInt(0,3)) {
+        case 0: 
+            for (y=1; y<=my; y++) {                             // iterate through all the scene
+                for (x=1; x<=mx; x++) {
+                    s[y][x].setPosition(startX,startY); 
+                    s[y][x].moveTo(x*16,y*16, getRandomInt(300,500));                             // move the new wall object to it's place from the center slowly
+                }
+            }
+            break;
+        case 1: 
+            for (y=1; y<=my; y++) {                             // iterate through all the scene
+                for (x=1; x<=mx; x++) {
+                    s[y][x].setPosition(getRandomInt(-1000,1000),getRandomInt(-1000,1000)); 
+                    s[y][x].moveTo(x*16,y*16, 500);                             // move the new wall object to it's place from the center slowly
+                }
+            }
+            break;
+        case 2: 
+            for (y=1; y<=my; y++) {                             // iterate through all the scene
+                for (x=1; x<=mx; x++) {
+                    s[y][x].setPosition(x*16,0); 
+                    s[y][x].moveTo(x*16,y*16, 300);                             // move the new wall object to it's place from the center slowly
+                }
+            }
+            break;
+        case 3: 
+            for (y=1; y<=my; y++) {                             // iterate through all the scene
+                for (x=1; x<=mx; x++) {
+                    s[y][x].setPosition(0,y*16); 
+                    s[y][x].moveTo(x*16,y*16, 400);                             // move the new wall object to it's place from the center slowly
+                }
+            }
+            break;
     }
 }
 
@@ -331,6 +369,9 @@ function moveobj(oobj,obj) {
     return obj;
 }
 
-
-
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
