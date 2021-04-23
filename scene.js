@@ -164,7 +164,8 @@ function makewall () {
     }
     let startX=getRandomInt(0,mx)*16;                   // the end where walls collapse if time has changed
     let startY=getRandomInt(0,my)*16;
-    let redrawType=getRandomInt(0,8); 
+    let redrawType=getRandomInt(0,9); 
+    let radian=Math.PI/180;
     for (y=1; y<=my; y++) {                             // iterate through all the scene
         for (x=1; x<=mx; x++) {
             switch (redrawType) {
@@ -203,6 +204,10 @@ function makewall () {
                 break;
                 case 8: 
                     s[y][x].setPosition(x*16,(Math.sin(x)+Math.cos(x))*my*16); 
+                    s[y][x].moveTo(x*16,y*16, 400);                             
+                break;
+                case 9: 
+                    s[y][x].setPosition(mx*16+x*2*16,y*16); 
                     s[y][x].moveTo(x*16,y*16, 400);                             
                 break;
             }
