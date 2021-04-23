@@ -83,8 +83,7 @@ function getRand(min, max) {
 */
 function makewall () {
     var x=0; var y=0;
-    let startX=getRandomInt(0,mx)*16;                   // the end where walls collapse if time has changed
-    let startY=getRandomInt(0,my)*16;
+
     for (y=1; y<=my; y++) {                             // iterate through all the scene
         for (x=1; x<=mx; x++) {
             var fn='p1.gif';                            // default image filename 
@@ -163,42 +162,55 @@ function makewall () {
 
         } 
     }
-    //startX=getRandomInt(0,mx)*16;
-    //startY=getRandomInt(0,my)*16;
-    switch (getRandomInt(0,3)) {
-        case 0: 
-            for (y=1; y<=my; y++) {                             // iterate through all the scene
-                for (x=1; x<=mx; x++) {
+    let startX=getRandomInt(0,mx)*16;                   // the end where walls collapse if time has changed
+    let startY=getRandomInt(0,my)*16;
+    let redrawType=getRandomInt(0,8); 
+    for (y=1; y<=my; y++) {                             // iterate through all the scene
+        for (x=1; x<=mx; x++) {
+            switch (redrawType) {
+                case 0:
                     s[y][x].setPosition(startX,startY); 
-                    s[y][x].moveTo(x*16,y*16, getRandomInt(300,500));                             // move the new wall object to it's place from the center slowly
-                }
-            }
-            break;
-        case 1: 
-            for (y=1; y<=my; y++) {                             // iterate through all the scene
-                for (x=1; x<=mx; x++) {
+                    s[y][x].moveTo(x*16,y*16, getRandomInt(300,500));                             // move the new wall object to it's place
+                    break;
+                case 1: 
                     s[y][x].setPosition(getRandomInt(-1000,1000),getRandomInt(-1000,1000)); 
-                    s[y][x].moveTo(x*16,y*16, 500);                             // move the new wall object to it's place from the center slowly
-                }
-            }
-            break;
-        case 2: 
-            for (y=1; y<=my; y++) {                             // iterate through all the scene
-                for (x=1; x<=mx; x++) {
+                    s[y][x].moveTo(x*16,y*16, 700);                             
+                    break;
+                case 2: 
                     s[y][x].setPosition(x*16,0); 
-                    s[y][x].moveTo(x*16,y*16, 300);                             // move the new wall object to it's place from the center slowly
-                }
-            }
-            break;
-        case 3: 
-            for (y=1; y<=my; y++) {                             // iterate through all the scene
-                for (x=1; x<=mx; x++) {
+                    s[y][x].moveTo(x*16,y*16, 300);                             
+                    break;
+                case 3: 
                     s[y][x].setPosition(0,y*16); 
-                    s[y][x].moveTo(x*16,y*16, 400);                             // move the new wall object to it's place from the center slowly
-                }
+                    s[y][x].moveTo(x*16,y*16, 400);                             
+                    break;
+                
+                case 4: 
+                    s[y][x].setPosition((x-(mx-2)/2)*160,(y-(my-2)/2)*160); 
+                    s[y][x].moveTo(x*16,y*16, 1000);                             
+                break;
+                case 5: 
+                    s[y][x].setPosition(x*16,my*16); 
+                    s[y][x].moveTo(x*16,y*16, 200+(my-y)*3-getRandomInt(0,150));                             
+                break;
+                case 6: 
+                    s[y][x].setPosition((mx-x)*16,startY); 
+                    s[y][x].moveTo(x*16,y*16, 300);                             
+                break;
+                case 7: 
+                    s[y][x].setPosition((mx-x)*16,(my-y)*16); 
+                    s[y][x].moveTo(x*16,y*16, 300);                             
+                break;
+                case 8: 
+                    s[y][x].setPosition(x*16,(Math.sin(x)+Math.cos(x))*my*16); 
+                    s[y][x].moveTo(x*16,y*16, 400);                             
+                break;
             }
-            break;
+        }
     }
+            
+
+    
 }
 
 /* put an actual digit of time to the scene array ( c[] ) to x,y coordinates
