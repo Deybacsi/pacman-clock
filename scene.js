@@ -166,6 +166,16 @@ function makewall () {
     let startY=getRandomInt(0,my)*16;
     let redrawType=getRandomInt(0,9); 
     let radian=Math.PI/180;
+
+    // no effects
+    for (y=1; y<=my; y++) {                             // iterate through all the scene
+        for (x=1; x<=mx; x++) {
+            s[y][x].setPosition(x*16,y*16);
+        }
+    }
+
+    // effects
+    /*
     for (y=1; y<=my; y++) {                             // iterate through all the scene
         for (x=1; x<=mx; x++) {
             switch (redrawType) {
@@ -213,7 +223,7 @@ function makewall () {
             }
         }
     }
-            
+    */      
 
     
 }
